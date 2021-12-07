@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="all-pages.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        table {
+            font-family: 'Roboto';
+        }
+        .link-button {
+            text-decoration: none;
+            display: flex;
+            width: fit-content;
+            padding-inline: 8px;
+            font-weight: 500;
+            /* height: 40px; */
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            color: inherit;
+            /* font-family: 'Roboto Condensed', sans-serif; */
+            font-size: 15px;
+            letter-spacing: .3px;
+            /* text-transform: uppercase; */
+            /* font-weight: 600; */
+            border-radius: 2px;
+        }
+
+        .link-button:hover {
+            color: black;
+        }
+
+        .link-button svg {
+            width: 18px;
+            height: 18px;
+            fill: black;
+        }
+
+        .link-button span {
+            margin-top: 2px;
+        }
+
+        .edit {
+            background-color: #DAE6FB;
+            box-shadow: #DAE6FB 0 0 0 1px; 
+        }
+
+        .delete {
+            box-shadow: #F2D9DB 0 0 0 1px; 
+            background-color: #F2D9DB;
+        }
+
+        .feed-items {
+            background-color: white;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        td {
+            padding-right: 80px !important;
+        }
+
+        td:last-child {
+            padding-right: 16px !important;
+        }
+
+        .link {
+            text-decoration-thickness: 2px;
+            text-decoration-color: #94bbff;
+            text-underline-offset: 2px;
+            color: #0F62FE;
+            font-size: 17px;
+        }
+
+        td:nth-child(2) {
+            font-family: 'Roboto';
+        }
+
+        td {
+            padding-block: 12px !important;
+        }
+
+        .subtle-button {
+            text-decoration: none;
+            color: rgb(23,23,23);
+            padding: 6px 12px;
+            box-shadow: rgba(0,0,0,.12) 0 1px 1px, rgba(60,66,87, .2) 0 0 0 1px;
+            border-radius: 2px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            width: fit-content;
+            font-size: 15px;
+        }
+
+        a {
+           
+            font-weight: 400 !important;
+            letter-spacing: revert !important;
+        }
+
+a svg {
+  fill: rgb(23,23,23);
+  width: 16px;
+}
+
+    th {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+ 
+
+    </style>
+</head>
+<body>
+    <nav class="top-nav"></nav>
+    <div class="page-layout">
+    <div class="side-nav"></div>
+
+    <div style="width: fit-content">
+
+        <h1>Intel Feeds</h1>
+       
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Issued at</th>
+              <th class="align-thead" scope="col">Type</th>
+              <th class="align-thead" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="link" href="">09/04/2019</a></td>
+              <td>CareCERT</td>
+              <td><div class="buttons">
+                <a class="subtle-button" href="">Feed Items <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.59996 0H20V1.6H5.59996V0ZM5.59996 14.4H20V16H5.59996V14.4ZM5.59996 7.20002H20V8.80002H5.59996V7.20002ZM0.799988 7.20002H2.39999V8.80002H0.799988V7.20002ZM0.799988 0H2.39999V1.6H0.799988V0ZM0.799988 14.4H2.39999V16H0.799988V14.4Z" fill="#3C4257"/>
+                    </svg>
+                    </a>
+                    
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div></td>
+            </tr>
+            <tr>
+              <td><a class="link" href="">08/02/2019</a></td>
+              <td>CareCERT</td>
+              <td><div class="buttons">
+                <a class="subtle-button" href="">Feed Items <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.59996 0H20V1.6H5.59996V0ZM5.59996 14.4H20V16H5.59996V14.4ZM5.59996 7.20002H20V8.80002H5.59996V7.20002ZM0.799988 7.20002H2.39999V8.80002H0.799988V7.20002ZM0.799988 0H2.39999V1.6H0.799988V0ZM0.799988 14.4H2.39999V16H0.799988V14.4Z" fill="#3C4257"/>
+                    </svg>
+                    </a>
+
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div></td>
+            </tr>
+            <tr>
+              <td><a class="link" href="somewhere.com">13/12/2020</a></td>
+              <td>CareCERT</td>
+              <td><div class="buttons">
+                <a class="subtle-button" href="">Feed Items <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.59996 0H20V1.6H5.59996V0ZM5.59996 14.4H20V16H5.59996V14.4ZM5.59996 7.20002H20V8.80002H5.59996V7.20002ZM0.799988 7.20002H2.39999V8.80002H0.799988V7.20002ZM0.799988 0H2.39999V1.6H0.799988V0ZM0.799988 14.4H2.39999V16H0.799988V14.4Z" fill="#3C4257"/>
+                    </svg>
+                    </a>
+
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+      </div>
+</body>
+</html>

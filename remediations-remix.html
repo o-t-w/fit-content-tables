@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="all-pages.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F5F5F5;
+        }
+        .link-button {
+            text-decoration: none;
+            border: solid 2px;
+            display: flex;
+            width: fit-content;
+            padding-inline: 8px;
+            padding-block: 4px;
+            font-weight: 500;
+            /* height: 40px; */
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            color: inherit;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            letter-spacing: .3px;
+            /* text-transform: uppercase; */
+            font-weight: 600;
+            border-radius: 2px;
+        }
+
+        .link-button:hover {
+            color: rgb(30, 30, 30);
+        }
+
+        .link-button svg {
+            width: 18px;
+            height: 18px;
+            fill: rgb(30, 30, 30);
+        }
+
+        .link-button span {
+            margin-top: 2px;
+        }
+
+        .edit {
+            border-color: #0F62FE;
+            background-color: #DAE6FB;
+        }
+
+        .delete {
+            border-color: #C83C45;
+            background-color: #F2D9DB;
+        }
+
+        .feed-items {
+            background-color: white;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+        }
+
+        td {
+            padding-right: 80px !important;
+        }
+
+        td:last-child {
+            padding-right: 16px !important;
+        }
+
+        .link {
+            text-decoration-thickness: 2px;
+            text-decoration-color: #94bbff;
+            text-underline-offset: 2px;
+            color: #0F62FE;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        td:nth-child(2) {
+            font-family: 'Roboto';
+        }
+
+        td {
+            padding-block: 12px !important;
+        }
+
+        .remediation {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            background-color: rgb(240,240,240);
+            background-color: #F5F5F5;
+            padding: 16px 24px;
+            border-top: solid 2px #102B44;
+            box-shadow: #0000000d 0 2px 2px;
+        }
+
+        .remediations {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .pagination {
+            justify-content: center;
+        }
+
+        .heading-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 48px;
+            margin-bottom: 24px;
+        }
+
+        .link-button--add {
+            border-color: var(--brand-green);
+            background-color: #28a74533;
+        }
+
+        /*  override bootstrap class*/
+
+        .page-item.active .page-link {
+            background-color: #DAE6FB;
+            color: #0d6efd;
+            border-color: #DAE6FB;
+        }
+        .page-link {
+            border-color: #DAE6FB !important;
+        }
+
+        .edit {
+            box-shadow: #0f62fed4 0 1px 2px, #0f62fe75 0 0 0 1px;
+            border: 0;
+        }
+
+        .delete {
+            box-shadow: #c83c45d1 0 1px 2px, #c83c45a1 0 0 0 1px;
+            border: 0;
+        }
+
+        .link-button--add {
+            border: 0;
+            box-shadow: #28a745b5 0 1px 2px, #28a7457d 0 0 0 1px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav class="top-nav"></nav>
+    <div class="page-layout">
+    <div class="side-nav"></div>
+
+    <div>
+
+        <div style="width: fit-content;">
+        <div class="heading-box">
+            <h1 style="margin: 0;">Remediations</h1>
+        <a class="link-button link-button--add" href="">Add remediation <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 6.525H9.6V0.125H6.4V6.525H0V9.725H6.4V16.125H9.6V9.725H16V6.525Z"/>
+            </svg>
+            </a>
+        </div>
+
+        
+        <div style="width: fit-content" class="remediations">
+        <div class="remediation">
+            <a class="link" href="">Phishing training</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+         
+        <div class="remediation">
+            <a class="link" href="">Email security training</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+
+        <div class="remediation">
+            <a class="link" href="">Reset user accounts</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+
+        <div class="remediation">
+            <a class="link" href="">Ensure correct user access levels</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+
+        <div class="remediation">
+            <a class="link" href="">Ensure correct user access levels</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+
+        <div class="remediation">
+            <a class="link" href="">Ensure correct user access levels</a>
+            <div class="buttons">            
+                <a class="link-button edit" href="somewhere.com">
+                    <span>Edit</span>
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H14V13H0V12ZM11.7 3.5C12.1 3.1 12.1 2.5 11.7 2.1L9.9 0.3C9.5 -0.1 8.9 -0.1 8.5 0.3L1 7.8V11H4.2L11.7 3.5ZM9.2 1L11 2.8L9.5 4.3L7.7 2.5L9.2 1ZM2 10V8.2L7 3.2L8.8 5L3.8 10H2Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                
+                    <a class="link-button delete" href="somewhere.com">
+                        <span>Delete</span>
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.125H4.5V1.25H9V0.125ZM0 2.375V3.5H1.125V14.75C1.125 15.3713 1.62868 15.875 2.25 15.875H11.25C11.8713 15.875 12.375 15.3713 12.375 14.75V3.5H13.5V2.375H0ZM2.25 14.75V3.5H11.25V14.75H2.25ZM4.5 5.75H5.625V12.5H4.5V5.75ZM9 5.75H7.875V12.5H9V5.75Z" fill="black"/>
+                            </svg>
+                        </a>
+            </div>
+        </div>
+          
+    </div>
+
+</div>
+
+    <nav style="margin-inline: auto; margin-top: 60px;" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item disabled active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>    
+
+      </div>
+      </div>
+</body>
+</html>

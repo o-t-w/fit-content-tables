@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="all-pages.css">
+
+    <style>
+
+        .two-col {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .meta * {
+            margin: 0;
+        }
+
+        body {
+        background-color: rgb(251, 251, 251);
+    }
+
+        button, select, input:not(.form-check-input) {
+          border-radius: 2px !important;
+        }
+
+        select, input[type=file] {
+          max-width: 398px;
+        }
+
+        input[type=checkbox]:not(.form-check-input), input[type=radio] {
+          width: 20px;
+          height: 20px;
+          accent-color: #0d6efd;
+        }
+
+        :root {
+          --orange: #FF9713;
+          --blue: #1D9DD9;
+        }
+
+        table {
+          /* width: fit-content !important; */
+          font-family: 'Roboto Condensed', sans-serif;
+          margin-top: 16px;
+        }
+
+        td, th {
+          padding-block: 12px !important;
+          padding-inline: 16px !important;
+        }
+
+        td:nth-child(1) {
+          font-family: 'Roboto';
+          padding-right: 96px !important;
+        }
+
+        th { 
+          text-transform: uppercase;
+        }
+
+        td {
+          vertical-align: middle;
+        }
+
+        select {
+          font-size: 16px !important;
+        }
+
+        h1 {
+          margin-top: 44px;
+          font-weight: 400;
+        }
+
+        h2 {
+          margin-top: 44px;
+          font-size: 22px;
+        }
+
+        select {
+          width: 172px !important;
+          margin-left: auto;
+        }
+
+        .align-thead {
+          margin-left: auto;
+          width: 172px; /* same width as select input */
+        }
+
+    </style>
+</head>
+<body>
+  <nav class="top-nav"></nav>
+  <div class="page-layout">
+  <div class="side-nav"></div>
+
+  <div class="main">
+  <div style="width: fit-content">
+  <h1>All Departments</h1>
+
+  <h2>Compliance</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th class="align-thead" scope="col">Access Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Barton Lockman</td>
+        <td>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected>Team member</option>
+          <option value="1">Team Lead</option>
+          <option value="2">No Access</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td>Casandra Borer</td>
+        <td>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Team member</option>
+            <option value="1">Team Lead</option>
+            <option value="2">No Access</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Laurena Rempel</td>
+        <td> 
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected>Team member</option>
+          <option value="1">Team Lead</option>
+          <option value="2">No Access</option>
+        </select>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Customer Success</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Access Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Blaine Earl Frederick Joneston</td>
+        <td>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected>Team member</option>
+          <option value="1">Team Lead</option>
+          <option value="2">No Access</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td>Sandra Pitt</td>
+        <td>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Team member</option>
+            <option value="1">Team Lead</option>
+            <option value="2">No Access</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Lisa Smith</td>
+        <td> 
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected>Team member</option>
+          <option value="1">Team Lead</option>
+          <option value="2">No Access</option>
+        </select>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<footer><p>© 2021 Defense.com. All rights reserved.</p></footer>
+</div>
+</div>
+  
+</body>
+</html>
